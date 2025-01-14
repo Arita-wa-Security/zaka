@@ -46,7 +46,7 @@ function Header(){
                 <a
                   rel="noopener"
                   target="_blank"
-                  href="https://github.com/iam-aydin"
+                  href="/offertory"
                   className="bg-gray-800 rounded-lg p-5 w-64 flex items-center gap-2 text-white"
                 >
                   <img
