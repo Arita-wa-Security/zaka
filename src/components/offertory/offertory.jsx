@@ -1,44 +1,45 @@
 import React, { useState } from 'react';
+import "../offertory/offertory.css"
 
-const QualificationsForm = () => {
-  // State to hold all qualifications
-  const [qualifications, setQualifications] = useState([
+const OffertoryForm = () => {
+  // State to hold all offerings
+  const [offerings, setOfferings] = useState([
     { school: '', degree: '', graduationYear: '' },
   ]);
 
   // Handle input changes
   const handleInputChange = (index, e) => {
     const { name, value } = e.target;
-    const updatedQualifications = [...qualifications];
-    updatedQualifications[index][name] = value;
-    setQualifications(updatedQualifications);
+    const updatedofferings = [...offerings];
+    updatedofferings[index][name] = value;
+    setOfferings(updatedofferings);
   };
 
   // Add a new qualification
   const handleAddQualification = () => {
-    setQualifications([
-      ...qualifications,
+    setOfferings([
+      ...offerings,
       { school: '', degree: '', graduationYear: '' },
     ]);
   };
 
   // Remove a qualification at a specific index
   const handleRemoveQualification = (index) => {
-    const updatedQualifications = qualifications.filter((_, i) => i !== index);
-    setQualifications(updatedQualifications);
+    const updatedofferings = offerings.filter((_, i) => i !== index);
+    setOfferings(updatedofferings);
   };
 
   // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would usually send the data to the server or handle it as needed
-    console.log('Submitted Qualifications:', qualifications);
+    console.log('Submitted offerings:', offerings);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>School Qualifications</h2>
-      {qualifications.map((qualification, index) => (
+    <form onSubmit={handleSubmit} className="block bg-black">
+      <h2>School offerings</h2>
+      {offerings.map((qualification, index) => (
         <div key={index} className="qualification-entry">
           <label>
             School:
@@ -72,7 +73,7 @@ const QualificationsForm = () => {
           </label>
 
           {/* Remove qualification button */}
-          {qualifications.length > 1 && (
+          {offerings.length > 1 && (
             <button type="button" onClick={() => handleRemoveQualification(index)}>
               Remove
             </button>
@@ -82,7 +83,7 @@ const QualificationsForm = () => {
       
       {/* Add new qualification button */}
       <button type="button" onClick={handleAddQualification}>
-        Add Qualification
+        Add another offering
       </button>
       
       {/* Submit button */}
@@ -91,4 +92,4 @@ const QualificationsForm = () => {
   );
 };
 
-export default QualificationsForm;
+export default OffertoryForm;
