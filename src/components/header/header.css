@@ -5,8 +5,8 @@ body {
 .mr-10{
     height: 300px;
     width: 100%;
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwjitFKJGaGoMmOhT8TxWhH4ML9v5yvojog&s"); */
-    background-color: brown;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwjitFKJGaGoMmOhT8TxWhH4ML9v5yvojog&s");
+    /* background-color: brown; */
     background-size: cover;
     background-repeat: no-repeat; 
 }
@@ -42,9 +42,29 @@ body {
 
   @media screen and (min-width: 1280px) {
     .mr-10 {
+        /* height: 500px; */
+        width: 100%;
+        background-color: brown;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwjitFKJGaGoMmOhT8TxWhH4ML9v5yvojog&s");
+    }
+
+    #container {
+      background-color:brown;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1536px) {
+    .mr-10 {
         height: 500px;
         width: 100%;
+        /* background-color: brown; */
         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMwjitFKJGaGoMmOhT8TxWhH4ML9v5yvojog&s");
+    }
+
+    #container {
+      background-color:brown;
+      width: 100%;
     }
   }
 
