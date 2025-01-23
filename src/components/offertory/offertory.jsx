@@ -37,58 +37,68 @@ const OffertoryForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="block bg-black">
-      <h2>School offerings</h2>
-      {offerings.map((qualification, index) => (
-        <div key={index} className="qualification-entry">
-          <label>
-            School:
-            <input
-              type="text"
-              name="school"
-              value={qualification.school}
-              onChange={(e) => handleInputChange(index, e)}
-              required
-            />
-          </label>
-          <label>
-            Degree:
-            <input
-              type="text"
-              name="degree"
-              value={qualification.degree}
-              onChange={(e) => handleInputChange(index, e)}
-              required
-            />
-          </label>
-          <label>
-            Graduation Year:
-            <input
-              type="number"
-              name="graduationYear"
-              value={qualification.graduationYear}
-              onChange={(e) => handleInputChange(index, e)}
-              required
-            />
-          </label>
+    <div className='block'>
+      <form
+        onSubmit={handleSubmit}
+        className="block bg-gradient-to-br from-white to-[rgba(173,216,230,0.3)]"
+      >
+        <h2>Offerings</h2>
+        {offerings.map((offering, index) => (
+          <div key={index} className="block qualification-entry">
+            <label>
+              School:
+              <input
+                type="text"
+                name="school"
+                value={offering.school}
+                onChange={(e) => handleInputChange(index, e)}
+                required
+              />
+            </label>
+            <label>
+              Degree:
+              <input
+                type="text"
+                name="degree"
+                value={offering.degree}
+                onChange={(e) => handleInputChange(index, e)}
+                required
+              />
+            </label>
+            <label>
+              Graduation Year:
+              <input
+                type="number"
+                name="graduationYear"
+                value={offering.graduationYear}
+                onChange={(e) => handleInputChange(index, e)}
+                required
+              />
+            </label>
 
-          {/* Remove qualification button */}
-          {offerings.length > 1 && (
-            <button type="button" onClick={() => handleRemoveQualification(index)}>
-              Remove
-            </button>
-          )}
+            {/* Remove qualification button */}
+            {offerings.length > 1 && (
+              <button
+                type="button"
+                onClick={() => handleRemoveQualification(index)}
+              >
+                Remove
+              </button>
+            )}
+          </div>
+        ))}
+
+        {/* Add new qualification button */}
+        <div className="block" id="butt">
+          <button type="button" onClick={handleAddQualification}>
+            Add another offering
+          </button>
+
+          {/* Submit button */}
+          <button type="submit">Submit</button>
         </div>
-      ))}
-      
-      {/* Add new qualification button */}
-      <button type="button" onClick={handleAddQualification}>
-        Add another offering
-      </button>
-      
-      {/* Submit button */}
-      <button type="submit">Submit</button>
-    </form>
+      </form>
+    </div>
   );
 };
 
