@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/zaka/static/css/main.1a26c1a1.css",
+    "main.js": "/zaka/static/js/main.b9ec5e01.js",
+    "static/js/453.355d8e98.chunk.js": "/zaka/static/js/453.355d8e98.chunk.js",
+    "static/media/offertory-removebg-preview.png": "/zaka/static/media/offertory-removebg-preview.c80d94b586c15f58c8f3.png",
+    "index.html": "/zaka/index.html",
+    "main.1a26c1a1.css.map": "/zaka/static/css/main.1a26c1a1.css.map",
+    "main.b9ec5e01.js.map": "/zaka/static/js/main.b9ec5e01.js.map",
+    "453.355d8e98.chunk.js.map": "/zaka/static/js/453.355d8e98.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a26c1a1.css",
+    "static/js/main.b9ec5e01.js"
+  ]
+}
