@@ -117,9 +117,9 @@ function FundAllocationForm() {
               </button>
 
               <div className="d-flex justify-content-between align-items-center mb-3">
-                <strong>Total:</strong>
+                <strong>Total: </strong>
                 <span className="fs-5 fw-bold text-primary">
-                  ${totalAmount.toFixed(2)}
+                   Ksh {totalAmount.toFixed(2)}
                 </span>
               </div>
 
@@ -152,9 +152,9 @@ function FundAllocationForm() {
                   <table className="table table-hover align-middle">
                     <thead className="table-light">
                       <tr>
-                        <th>Name</th>
+                        {/* <th>Name</th>
                         <th>Phone</th>
-                        <th>Date</th>
+                        <th>Date</th> */}
                         <th>Account</th>
                         <th>Amount</th>
                       </tr>
@@ -162,12 +162,12 @@ function FundAllocationForm() {
                     <tbody>
                       {entries.map((entry, index) => (
                         <tr key={index}>
-                          <td>{entry.name}</td>
+                          {/* <td>{entry.name}</td>
                           <td>{entry.phone}</td>
-                          <td>{entry.date}</td>
+                          <td>{entry.date}</td> */}
                           <td>{entry.accountName}</td>
                           <td className="fw-semibold">
-                            ${entry.amount.toFixed(2)}
+                            Ksh {entry.amount.toFixed(2)}
                           </td>
                         </tr>
                       ))}
