@@ -92,7 +92,7 @@ function FundAllocationForm() {
 
   return (
     <div className="container-fluid py-5 bg-light min-vh-100">
-      <div className="row g-4 d-block d-lg-flex align-items-start gap-lg-4">
+      <div className="row g-4 align-items-start">
 
         {/* LEFT SIDE - FORM */}
         <div className="col-12 col-lg-5">
